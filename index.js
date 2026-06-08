@@ -11,6 +11,11 @@ const JWT_SECRET = 'your_super_secret_key';
 // Mock in-memory database
 const users = [];
 
+// Server started indication
+app.get('/', (req, res) => {
+  res.send('Welcome to the Node.js ES6 Authentication & Authorization Example!');
+});
+
 // 1. AUTHENTICATION: User Registration (Signup)
 app.post('/api/signup', async (req, res) => {
   try {
